@@ -20,14 +20,18 @@ const ProductSchema = new mongoose.Schema({
         required: [true, 'Categories is required'],
     },
     size: {
-        type: String,
+        type: Array,
         required: [true, 'Size is required'],
     },
     color: {
-        type: String,
+        type: Array,
     },
     price:{
         type: Number,
+    },
+    inStock: {
+        type: Boolean,
+        default: true,
     }
 },{timestamps: true});
 
